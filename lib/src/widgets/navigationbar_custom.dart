@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
+import '../routes/app_routes.dart';
 import '../theme/padding_values.dart';
 import 'navigation_button.dart';
 import 'navigation_link.dart';
@@ -17,22 +19,27 @@ class NavigationbarCustom extends StatelessWidget
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const NavigationLogo(),
+          NavigationLogo(
+            onTap: () => Modular.to.pushReplacementNamed(AppRoutes.home),
+          ),
           SizedBox(
             child: Row(
               children: renderAllLinks(),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             child: Row(
               children: [
                 NavigationButton(
                   text: 'Entrar',
+                  onTap: () => Modular.to.pushReplacementNamed(AppRoutes.login),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 NavigationButton(
                   text: 'Cadastrar',
                   inverse: true,
+                  onTap: () =>
+                      Modular.to.pushReplacementNamed(AppRoutes.signup),
                 ),
               ],
             ),
@@ -44,9 +51,10 @@ class NavigationbarCustom extends StatelessWidget
 
   List<Widget> renderAllLinks() {
     return [
-      const NavigationLink(
+      NavigationLink(
         text: "Início",
         active: true,
+        onTap: () => Modular.to.pushReplacementNamed(AppRoutes.home),
       ),
       const SizedBox(
         width: 30,
