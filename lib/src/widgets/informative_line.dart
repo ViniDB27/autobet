@@ -23,7 +23,7 @@ class InformativeLine extends StatelessWidget {
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              SelectableText(
                 "100+",
                 style: TextStyle(
                   color: Colors.white,
@@ -32,7 +32,7 @@ class InformativeLine extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              Text(
+              SelectableText(
                 "Usuários Ativos",
                 style: TextStyle(
                   color: Colors.white,
@@ -53,7 +53,7 @@ class InformativeLine extends StatelessWidget {
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              SelectableText(
                 "24/7",
                 style: TextStyle(
                   color: Colors.white,
@@ -62,7 +62,7 @@ class InformativeLine extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              Text(
+              SelectableText(
                 "Supporte Online",
                 style: TextStyle(
                   color: Colors.white,

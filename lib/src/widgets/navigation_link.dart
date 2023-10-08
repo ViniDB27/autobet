@@ -14,27 +14,30 @@ class NavigationLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          border: active
-              ? const Border(
-                  bottom: BorderSide(
-                    color: Color(0xFF0360D9),
-                    width: 1,
-                    style: BorderStyle.solid,
-                  ),
-                )
-              : null,
-        ),
-        child: Text(
-          text,
-          style: TextStyle(
-            color: active ? const Color(0xFF0360D9) : const Color(0xFF0D2B46),
-            fontSize: 18,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w500,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+            border: active
+                ? const Border(
+                    bottom: BorderSide(
+                      color: Color(0xFF0360D9),
+                      width: 1,
+                      style: BorderStyle.solid,
+                    ),
+                  )
+                : null,
+          ),
+          child: Text(
+            text,
+            style: TextStyle(
+              color: active ? const Color(0xFF0360D9) : const Color(0xFF0D2B46),
+              fontSize: 18,
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),

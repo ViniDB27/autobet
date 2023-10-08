@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../theme/padding_values.dart';
 import 'navigation_button.dart';
 import 'navigation_link.dart';
 import 'navigation_logo.dart';
@@ -11,18 +12,18 @@ class NavigationbarCustom extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 20),
+      padding: PaddingValues.padding(context),
       decoration: const BoxDecoration(color: Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children:  [
+        children: [
           const NavigationLogo(),
           SizedBox(
             child: Row(
               children: renderAllLinks(),
             ),
           ),
-           const SizedBox(
+          const SizedBox(
             child: Row(
               children: [
                 NavigationButton(
