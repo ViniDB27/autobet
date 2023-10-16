@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'routes/app_routes.dart';
+import 'views/history_view.dart';
 import 'views/home_view.dart';
 import 'views/login_view.dart';
 import 'views/signup_view.dart';
@@ -24,6 +25,11 @@ class AppModule extends Module {
     r.child(
       AppRoutes.signup,
       child: (context) => const SignupView(),
+      transition: TransitionType.noTransition,
+    );
+    r.child(
+      AppRoutes.history,
+      child: (context) => const HistoryView(),
       transition: TransitionType.noTransition,
     );
   }

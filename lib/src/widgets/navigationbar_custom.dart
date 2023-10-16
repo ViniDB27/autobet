@@ -59,8 +59,9 @@ class NavigationbarCustom extends StatelessWidget
       const SizedBox(
         width: 30,
       ),
-      const NavigationLink(
+      NavigationLink(
         text: "Histórico",
+        onTap: () => Modular.to.pushReplacementNamed(AppRoutes.history),
       ),
       const SizedBox(width: 30),
       const NavigationLink(
